@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    image: frontend-app
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    command: sh -c "yarn build && yarn start"
+
+  backend:
+    build:
+      context: ./backend
+    image: backend-app
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    ports:
+      - '8000:8000'
+    environment:
+      - PORT=8000
+    command: yarn start
+
+volumes:
+  frontend:
+  backend:
