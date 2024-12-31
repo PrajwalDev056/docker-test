@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Docker Commands
+
+To run the frontend project using Docker, follow these steps:
+
+1. Build the Docker image:
+
+```bash
+docker build -t frontend-app .
+```
+
+2. Run the Docker container:
+
+```bash
+docker run -p 3001:80 frontend-app
+```
+
+3. Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.

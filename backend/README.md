@@ -83,3 +83,21 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Docker Commands
+
+To run the backend project using Docker, follow these steps:
+
+1. Build the Docker image:
+
+```bash
+docker build -t backend-app .
+```
+
+2. Run the Docker container:
+
+```bash
+docker run -p 8000:8000 backend-app
+```
+
+3. Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
